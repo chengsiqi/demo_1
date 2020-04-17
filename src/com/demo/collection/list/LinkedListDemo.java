@@ -33,7 +33,7 @@ public class LinkedListDemo {
         System.out.println("该LinkedList的大小：" + linkedList.size());
 
         /*******************位置访问操作*******************/
-        System.out.println("-----------------------------");
+        System.out.println("--------------位置访问操作---------------");
         // 将此列表中指定位置的元素替换为指定的元素
         linkedList.set(1,3);
         System.out.println("LinkedList:" + linkedList);
@@ -41,7 +41,7 @@ public class LinkedListDemo {
         System.out.println("get(1)获得指定位置（这里为3）的元素：" + linkedList.get(1));
 
         /*******************Search操作*******************/
-        System.out.println("-----------------------------");
+        System.out.println("--------------Search操作---------------");
         linkedList.add(3);
         System.out.println("LinkedList:" + linkedList);
         // 返回此列表中首次出现的指定元素的索引
@@ -50,11 +50,11 @@ public class LinkedListDemo {
         System.out.println("lastIndexOf(3):" + linkedList.lastIndexOf(3));
 
         /*******************Queue操作*******************/
-        System.out.println("----------------------------");
+        System.out.println("-------------Queue操作---------------");
         System.out.println("LinkedList:" + linkedList);
         // 获取但不移除此列表的头
         System.out.println("peek():" + linkedList.peek());
-        // 获取但不一次此列表的头
+        // 获取但不移除此列表的头
         System.out.println("element():" + linkedList.element());
         // 获取并移除此列表的头
         linkedList.poll();
@@ -67,7 +67,7 @@ public class LinkedListDemo {
         System.out.println("After offer(4):" + linkedList);
 
         /*******************Deque操作*******************/
-        System.out.println("----------------------------");
+        System.out.println("--------------Deque操作--------------");
         System.out.println("LinkedList:" + linkedList);
         // 在此列表的开头插入指定的元素
         linkedList.offerFirst(2);

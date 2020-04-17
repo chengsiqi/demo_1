@@ -48,6 +48,19 @@ public class DateTimeTest {
         System.out.println(dt.getSecond());
     }
 
+    @Test
+    public void test0(){
+        // 获取当前日期时间
+        System.out.println(new Date().toString());
+        /**
+         * Java使用以下三种方法来比较两个日期：
+         *
+         * 使用 getTime() 方法获取两个日期（自1970年1月1日经历的毫秒数值），然后比较这两个值。
+         * 使用方法 before()，after() 和 equals()。例如，一个月的12号比18号早，则 new Date(99, 2, 12).before(new Date (99, 2, 18)) 返回true。
+         * 使用 compareTo() 方法，它是由 Comparable 接口定义的，Date 类实现了这个接口。
+         */
+    }
+
     /**
      * 如何取得从1970年1月1日0时0分0秒到现在的毫秒数
      */
@@ -95,5 +108,18 @@ public class DateTimeTest {
          * 这些类的设计都是用了不变模式, 因此都是线程安全的设计。
          * 参考： https://blog.csdn.net/jackfrued/article/details/44499227
          */
+    }
+
+    /**
+     * 打印昨天的当前时刻
+     */
+    @Test
+    public void test4(){
+        Calendar instance = Calendar.getInstance();
+        instance.add(Calendar.DATE, -1);
+        System.out.println(instance.getTime());
+
+        LocalDateTime time = LocalDateTime.now().minusDays(1);
+        System.out.println(time);
     }
 }
