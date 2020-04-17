@@ -26,6 +26,17 @@ public class CloneTest {
 
             System.out.println("p1: " + p1);
             System.out.println("p2: " + p2);
+
+            /**
+             * 匿名内部类在实现时必须借助一个接口或者一个抽象类或者一个普通类来构造,
+             * 从这个层次上讲匿名内部类是实现了接口或者继承了类, 但是不能通过extends或implement关键词来继承类或实现接口。
+             */
+            new Car("hehe", 200){
+                public void sysCar() {
+                    System.out.println(this.toString());
+                }
+            }.sysCar();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -19,5 +19,16 @@ public class PokerTest {
 
         System.out.println(c1);
         System.out.println(c2);
+
+        new PokerTest(){
+            @Override
+            public void test() {
+                System.out.println("hello");
+            }
+        }.test();
+    }
+
+    public void test(){
+        System.out.println("hehe");
     }
 }
