@@ -1,5 +1,7 @@
 package com.demo.stringdemo;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -37,5 +39,22 @@ public class StringDemo {
         System.out.println(list1);
 
         HashMap<String, Object> hashMap = new HashMap<>();
+    }
+
+    /**
+     * indexOf(str) 返回指定子字符串第一次出现的字符串内的索引
+     * substring(beginIndex) 返回一个字符串，该字符串是此字符串的子字符串。 子字符串以指定索引处的字符开头，并扩展到该字符串的末尾
+     */
+    @Test
+    public void test(){
+        String a = "abcdefgabcd";
+        String b = "abc";
+        int index = a.indexOf(b);
+        System.out.println(index);
+
+        a = a.substring(index + b.length());
+        System.out.println(a);
+        int index1 = a.indexOf(b);
+        System.out.println(index1);
     }
 }
