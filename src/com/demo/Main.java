@@ -1,5 +1,7 @@
 package com.demo;
 
+import org.junit.Test;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,5 +21,7 @@ public class Main {
 
 
         System.out.println( "-4<<2=" + (-4<<2) );
+
+        System.out.println("5/2=" + (5/2));
     }
 }

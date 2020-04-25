@@ -13,19 +13,19 @@ import java.util.Arrays;
  **/
 public class InsertionSort {
 
-    public static void main(String[] args){
-        int[] arr = {23,12,234,35,67,894,5,45,23,57,32,56};
+    public static void main(String[] args) {
+        int[] arr = {23, 12, 234, 35, 67, 894, 5, 45, 23, 57, 32, 56};
         //Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
-        for (int i=1; i< arr.length; i++){
-            int preIndex = i-1;
+        for (int i = 1; i < arr.length; i++) {
+            int preIndex = i - 1;
             int current = arr[i];
-            while(preIndex >=0 && arr[preIndex] > current){
-                arr[preIndex+1] = arr[preIndex];
+            while (preIndex >= 0 && arr[preIndex] > current) {
+                arr[preIndex + 1] = arr[preIndex];
                 preIndex--;
             }
-            arr[preIndex+1] = current;
+            arr[preIndex + 1] = current;
         }
 
         System.out.println(Arrays.toString(arr));
